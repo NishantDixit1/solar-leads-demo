@@ -6,7 +6,8 @@ own page at `/leads/<id>`, and every account sees only its own leads.
 
 Built for Robin Hamers (VisieAI) as a work sample.
 
-- Live: _fill in after deploy_
+- Live: https://solar-leads-demo.vercel.app
+- Repository: https://github.com/NishantDixit1/solar-leads-demo
 - Stack: Next.js 16 (App Router), TypeScript, Supabase Auth + Postgres, Vercel
 
 ## Test accounts
@@ -68,9 +69,10 @@ npm run dev
 ## Checking the isolation
 
 ```bash
-npm run dev
-node scripts/check-isolation.mjs http://localhost:3000
+node scripts/check-isolation.mjs https://solar-leads-demo.vercel.app
 ```
+
+Or against a local server (`npm run dev`) with `http://localhost:3000`.
 
 It signs in as both accounts and then, as Sam, tries to `GET`, `PATCH` and
 `DELETE` one of Iris's real lead ids, straight against Postgres and through the
